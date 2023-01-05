@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\MatkulController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,23 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('dosen')->group(function () {
     // daftar dosen
-    Route::get('', function(
-        $title = "Dosen | Data"
-    ) {
-        return view('dosen.dosen', compact('title'));
-    })->name('v_dosen');
+    Route::resource('dosen', DosenController::class);
 
     // profile dosen
-    Route::get('profil', function (
-        $title = "Dosen | Profil"
-    ) {
-        return view('dosen.profile', compact('title'));
-    })->name('v_profil');
+    Route::get('profile/{id}', [DosenController::class, 'profile'])->name('dosen.profile');
 
     // data_pengampu
-    Route::get('ampu', function(
-        $title = "Data | Pengampu"
-    ) {
-        return view('matkul.ampu', compact('title'));
-    })->name('v_ampu');
+    Route::resource('ampu', MatkulController::class);
 });

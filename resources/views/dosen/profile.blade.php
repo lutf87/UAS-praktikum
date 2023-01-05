@@ -8,7 +8,7 @@
                     <h4>Profil Dosen</h4>
                 </div>
                 <div class="col">
-                    <a href="{{ route('v_dosen') }}" class="btn btn-danger btn-sm f">Kembali</a>
+                    <a href="{{ route('dosen.index') }}" class="btn btn-danger btn-sm f">Kembali</a>
                 </div>
             </div>
         </div>

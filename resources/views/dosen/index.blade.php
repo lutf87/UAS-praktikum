@@ -25,7 +25,7 @@
                                 Nama
                             </div>
                             <div class="row mt-2">
-                                <a href="{{ route('v_profil') }}" class="btn btn-primary" style="width: auto">Lihat Profile</a>
+                                <a href="{{ route('dosen.profile', 1) }}" class="btn btn-primary" style="width: auto">Lihat Profile</a>
                             </div>
                         </td>
                         <td>Otto</td>
