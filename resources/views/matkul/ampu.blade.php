@@ -11,16 +11,18 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Nama Dosen</th>
-                        <th scope="col">Mata Kuliah Yang Diampu</th>
+                        <th scope="col">Nama Matkul</th>
+                        <th scope="col">Kode Matkul</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($data as $item)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
+                        <th scope="row"></th>
+                        <td>{{ $item->nama_matkul }}</td>
+                        <td>{{ $item->kode_matkul }}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

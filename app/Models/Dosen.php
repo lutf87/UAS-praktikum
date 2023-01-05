@@ -25,6 +25,6 @@ class Dosen extends Model
      */
     public function tb_matkul()
     {
-        return $this->belongsTo(Matkul::class);
+        return $this->hasMany(Matkul::class);
     }
 }

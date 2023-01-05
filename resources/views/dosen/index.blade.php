@@ -15,22 +15,25 @@
                         <th scope="col">Nama</th>
                         <th scope="col">NIP</th>
                         <th scope="col">Foto</th>
+                        <td scope="col">Matkul</td>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($dosen as $item1)
                     <tr>
-                        <th scope="row">1</th>
+                        <td></td>
                         <td>
-                            <div class="row">
-                                Nama
-                            </div>
+                            <div class="row">{{ $item1->nama_dosen }}</div>
                             <div class="row mt-2">
                                 <a href="{{ route('dosen.profile', 1) }}" class="btn btn-primary" style="width: auto">Lihat Profile</a>
                             </div>
                         </td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{{ $item1->nip }}</td>
+                        <td>{{ $item1->foto_dosen }}</td>
+                        <td></td>
+                        <th scope="row"></th>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

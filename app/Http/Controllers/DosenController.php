@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dosen;
+use App\Models\Matkul;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
@@ -14,8 +15,10 @@ class DosenController extends Controller
      */
     public function index()
     {
+        $dosen = Dosen::all();
+        $matkul = Matkul::all();
         $title = "Dosen | Data";
-        return view('dosen.index', compact('title'));
+        return view('dosen.index', compact('title','dosen','matkul'));
     }
 
     public function profile($id)

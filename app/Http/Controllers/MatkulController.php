@@ -14,8 +14,9 @@ class MatkulController extends Controller
      */
     public function index()
     {
+        $data = Matkul::all();
         $title = "Data | Pengampu";
-        return view('matkul.ampu', compact('title'));
+        return view('matkul.ampu', compact('title','data'));
     }
 
     /**
